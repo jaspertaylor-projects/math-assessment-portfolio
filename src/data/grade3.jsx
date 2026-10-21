@@ -47,13 +47,14 @@ export const grade3Items = [
     standard: '3.NF.A.3b',
     standardText: 'Find simple equivalent fractions and explain why they are equal using a fraction model.',
     standardUrl: 'https://www.thecorestandards.org/Math/Content/3/NF/A/3/b/',
-    alignmentEvidence: 'Students generate two fractions equivalent to 2/4 and explain why they represent the same part of the whole.',
+    alignmentEvidence: 'Students generate two fractions equivalent to 2/4 and shade a differently partitioned model to represent the same amount.',
     type: 'Constructed response',
-    points: 3,
+    points: 4,
     stem: (
       <>
+        <p>The model shows <Frac n={2} d={4} />.</p>
         <figure>
-          <svg viewBox="0 0 180 180" role="img" aria-labelledby="grade3-equivalent-square" style={{ width: '100%', maxWidth: '12rem', height: 'auto' }}>
+          <svg viewBox="9 9 162 162" role="img" aria-labelledby="grade3-equivalent-square" style={{ width: '100%', maxWidth: '12rem', height: 'auto' }}>
             <title id="grade3-equivalent-square">A square split into four equal small squares. The two top squares are shaded. The two bottom squares are not shaded.</title>
             <rect x="10" y="10" width="160" height="160" fill="var(--surface)" />
             <rect x="10" y="10" width="160" height="80" fill="var(--dok2)" fillOpacity="0.35" />
@@ -61,34 +62,52 @@ export const grade3Items = [
             <path d="M90 10V170 M10 90H170" fill="none" stroke="var(--ink)" strokeWidth="2" />
           </svg>
         </figure>
-        <p>Write 2 different fractions that are equivalent to <Frac n={2} d={4} />. Explain why your fractions show the same amount.</p>
       </>
     ),
-    blocks: [{ kind: 'response', label: 'Write 2 different fractions equivalent to 2/4 and explain why they are equal.' }],
+    blocks: [
+      {
+        kind: 'response',
+        label: 'Part 1',
+        inputLabel: 'Part 1: Write 2 fractions equivalent to 2/4 and explain why they are equal.',
+        prompt: <p>Write 2 different fractions that are equivalent to <Frac n={2} d={4} />. Explain why your fractions show the same amount.</p>,
+      },
+      {
+        kind: 'fraction-model',
+        label: 'Part 2',
+        inputLabel: 'Part 2: Shade a model equivalent to 2/4.',
+        prompt: <p>Shade the model below to show the same amount as the model above. Select a part to shade or unshade it.</p>,
+        rows: 2,
+        columns: 4,
+        answerShaded: 4,
+      },
+    ],
     key: (
-      <p>
-        Possible answers: <Frac n={1} d={2} /> and <Frac n={3} d={6} />.
-        Accept any two different fractions equivalent to 2/4, with a correct explanation.
-      </p>
+      <>
+        <p><strong>Part 1:</strong> Possible answers are <Frac n={1} d={2} /> and <Frac n={3} d={6} />. Accept any two different fractions equivalent to 2/4, with a correct explanation.</p>
+        <p><strong>Part 2:</strong> Shade any 4 of the 8 equal parts. The completed model shows <Frac n={4} d={8} /> = <Frac n={2} d={4} />.</p>
+      </>
     ),
     sample: (
       <p>
         My fractions are 1/2 and 3/6. The shaded part is half the square.
         If I split each half into 3 equal parts, 3 of the 6 parts are shaded.
-        Both fractions show the same amount as 2/4.
+        Both fractions show the same amount as 2/4. In Part 2, I shaded 4 of the 8 parts.
+        That shows 4/8, which is also half the square.
       </p>
     ),
     rubric: [{
-      title: 'Scoring rubric · 3 points total; add fractions and explanation scores',
+      title: 'Scoring rubric · 4 points total; add fractions, explanation, and model scores',
       rows: [
         { score: 'Fractions · 2', text: 'Writes two different fractions equivalent to 2/4, such as 1/2 and 3/6.' },
         { score: 'Fractions · 1', text: 'Writes only one correct fraction, or repeats the same correct fraction twice.' },
         { score: 'Fractions · 0', text: 'Gives no correct fraction or no answer.' },
         { score: 'Explanation · 1', text: 'Uses the picture or describes equal parts to explain why the fractions represent the same shaded amount of the same whole.' },
         { score: 'Explanation · 0', text: 'Gives no correct picture-based explanation, or gives no response.' },
+        { score: 'Model · 1', text: 'Shades exactly 4 of the 8 equal parts in Part 2. Any arrangement of four shaded parts is correct.' },
+        { score: 'Model · 0', text: 'Shades a different number of parts or leaves the model blank.' },
       ],
     }],
-    dokWhy: 'Students connect different ways of partitioning the same shaded area and explain why the fractions have equal value.',
+    dokWhy: 'Students explain fraction equivalence and transfer the same amount to a model with a different number of equal parts.',
   },
   {
     id: 3,

@@ -163,11 +163,58 @@ function ResponseBlock({ block, response = '', onResponseChange }) {
       <textarea
         className="response-box"
         rows={block.rows ?? (block.variant === 'grid' ? 3 : 4)}
-        aria-label={block.label}
+        aria-label={block.inputLabel ?? block.label}
         value={response}
         onChange={(event) => onResponseChange?.(event.target.value)}
         placeholder={block.variant === 'grid' ? 'Write the perimeter and area of each rectangle…' : 'Write your answer here…'}
       />
+    </div>
+  )
+}
+
+function FractionModelBlock({ block, revealed, response, onResponseChange }) {
+  const selected = Array.isArray(response) ? response : []
+  const total = block.rows * block.columns
+  const toggle = (index) => onResponseChange?.(
+    selected.includes(index) ? selected.filter((cell) => cell !== index) : [...selected, index],
+  )
+
+  return (
+    <div className="fraction-model-response">
+      <figure>
+        <div
+          className="fraction-model"
+          role="group"
+          aria-label={block.inputLabel ?? 'Shade the fraction model'}
+          style={{ '--model-rows': block.rows, '--model-columns': block.columns }}
+        >
+          {Array.from({ length: total }, (_, index) => (
+            <button
+              key={index}
+              type="button"
+              className={`fraction-model-cell${selected.includes(index) ? ' is-shaded' : ''}`}
+              aria-label={`Row ${Math.floor(index / block.columns) + 1}, column ${index % block.columns + 1}`}
+              aria-pressed={selected.includes(index)}
+              onClick={() => toggle(index)}
+            >
+              {selected.includes(index) && <span aria-hidden="true">✓</span>}
+            </button>
+          ))}
+        </div>
+        <figcaption className="fraction-model-caption">
+          <span aria-live="polite">{selected.length} of {total} parts shaded</span>
+          <button type="button" className="link-btn" disabled={!selected.length} onClick={() => onResponseChange?.([])}>
+            Clear model
+          </button>
+        </figcaption>
+      </figure>
+      {revealed && (
+        <p className="fraction-model-feedback">
+          {selected.length === block.answerShaded
+            ? 'Your model shows an equivalent fraction.'
+            : `A matching model has ${block.answerShaded} of ${total} parts shaded.`}
+        </p>
+      )}
     </div>
   )
 }
@@ -190,6 +237,7 @@ const RENDERERS = {
   classify: ClassifyBlock,
   matrix: MatrixBlock,
   response: ResponseBlock,
+  'fraction-model': FractionModelBlock,
   sources: SourcesBlock,
 }
 

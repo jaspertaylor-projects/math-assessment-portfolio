@@ -84,20 +84,16 @@ export const grade4Items = [
     points: 4,
     stem: (
       <>
-        <p>Leo says this about fractions of the same whole:</p>
-        <blockquote className="quote">“When two fractions have different numerators and different denominators, the one with the larger numerator is always greater.”</blockquote>
+        <p>Leo says, “A larger numerator always means a larger fraction.”</p>
         <p>
-          Is Leo right? Make up your own pair of fractions that proves your answer. Use fractions of the same
-          whole, with different numerators and different denominators. Choose denominators from 2, 3, 4,
-          6, 8, or 12.
+          Is Leo right? Choose two fractions of the same whole with different numerators and denominators.
+          Use denominators from 2, 3, 4, 6, 8, or 12.
         </p>
         <p>
-          Compare your fractions using &lt;, &gt;, or =. Show why your comparison is correct. You can use equal
-          fractions, a familiar fraction such as 1/2, or a fraction drawing that you describe in words.
+          Compare them using &lt;, &gt;, or =. Explain your comparison and what it shows about Leo’s claim.
         </p>
         <p>
-          Explain what your example tells you about the word <strong>always</strong>. Then write a rule that
-          tells when looking only at the numerators works. Explain why your rule works every time it applies.
+          When does comparing numerators work? Write a rule and explain why.
         </p>
       </>
     ),

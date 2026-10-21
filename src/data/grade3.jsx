@@ -121,10 +121,10 @@ export const grade3Items = [
     stem: (
       <>
         <p>Nora says, “If two rectangles have the same area, their perimeters are always the same.”</p>
-        <p>Is Nora right or wrong? Use examples to explain your answer.</p>
+        <p>Is Nora right or wrong? Explain your answer with 2 or more examples that prove whether Nora is right or wrong.</p>
       </>
     ),
-    blocks: [{ kind: 'response', label: 'Explain whether Nora is right or wrong using examples.' }],
+    blocks: [{ kind: 'response', label: 'Explain whether Nora is right or wrong using 2 or more examples.' }],
     key: (
       <p>
         <strong>Nora is wrong.</strong> For example, a 2-by-6 rectangle and a 3-by-4 rectangle both have
@@ -141,7 +141,7 @@ export const grade3Items = [
     rubric: [{
       title: 'Scoring rubric · 4 points total; add examples and argument scores',
       rows: [
-        { score: 'Examples · 2', text: 'Provides valid rectangle examples with equal areas and different perimeters, supported by accurate dimensions, calculations, or labeled drawings. No particular area or side lengths are required.' },
+        { score: 'Examples · 2', text: 'Provides 2 or more valid rectangle examples with equal areas and different perimeters, supported by accurate dimensions, calculations, or labeled drawings. No particular area or side lengths are required.' },
         { score: 'Examples · 1', text: 'Offers relevant rectangle examples with a minor error or missing evidence, or supports only one valid rectangle.' },
         { score: 'Examples · 0', text: 'Provides no mathematically usable rectangle examples or no response.' },
         { score: 'Argument · 2', text: 'Rejects the claim and explicitly explains that matching areas with different perimeters form a counterexample to “always.”' },

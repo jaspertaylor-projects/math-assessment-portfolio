@@ -74,22 +74,22 @@ export const grade3Items = [
       {
         kind: 'fraction-model',
         label: 'Part 2',
-        inputLabel: 'Part 2: Use the provided model to show equivalent fractions.',
-        prompt: <p>Use the model below to show why your fractions are equivalent to <Frac n={2} d={4} />. Select a part of the model below to shade or unshade it.</p>,
-        rows: 2,
-        columns: 4,
-        answerShaded: 4,
+        inputLabel: 'Part 2: Shade a fraction equivalent to 2/4 in the model.',
+        prompt: <p>Use the model to shade an equivalent fraction to <Frac n={2} d={4} />. Select a part of the model below to shade or unshade it.</p>,
+        rows: 4,
+        columns: 5,
+        answerShaded: 10,
       },
     ],
     key: (
       <>
         <p><strong>Part 1:</strong> Possible answers are <Frac n={1} d={2} /> and <Frac n={3} d={6} />. Accept any two different fractions equivalent to 2/4.</p>
-        <p><strong>Part 2:</strong> Shade any 4 of the 8 equal parts in the provided model to match the amount shown by 2/4.</p>
+        <p><strong>Part 2:</strong> Shade any 10 of the 20 equal parts in the provided model to match the amount shown by 2/4.</p>
       </>
     ),
     sample: (
       <p>
-        My fractions are 1/2 and 3/6. In Part 2, I used the provided model and shaded 4 of the 8 parts.
+        My fractions are 1/2 and 3/6. In Part 2, I used the provided model and shaded 10 of the 20 parts.
         The shaded area matches the 2/4 model. Each of these fractions shows half the square.
       </p>
     ),
@@ -99,7 +99,7 @@ export const grade3Items = [
         { score: 'Fractions · 2', text: 'Writes two different fractions equivalent to 2/4, such as 1/2 and 3/6.' },
         { score: 'Fractions · 1', text: 'Writes only one correct fraction, or repeats the same correct fraction twice.' },
         { score: 'Fractions · 0', text: 'Gives no correct fraction or no answer.' },
-        { score: 'Model · 2', text: 'Uses the provided model with exactly 4 of 8 parts shaded to show equivalence to 2/4.' },
+        { score: 'Model · 2', text: 'Uses the provided model with exactly 10 of 20 parts shaded to show equivalence to 2/4.' },
         { score: 'Model · 1', text: 'Shades the provided model, but an error makes the equivalence incomplete or unclear.' },
         { score: 'Model · 0', text: 'Provides no usable model.' },
       ],

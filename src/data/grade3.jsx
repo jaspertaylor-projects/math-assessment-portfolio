@@ -104,8 +104,7 @@ export const grade3Items = [
     points: 4,
     stem: (
       <>
-        <p>Nora says, “If two rectangles have the same area, the distance around them is always the same.”</p>
-        <p>The distance around a shape is called its <strong>perimeter</strong>.</p>
+        <p>Nora says, “If two rectangles have the same area, their perimeters are always the same.”</p>
         <p>
           Is Nora right? Choose two different rectangles. Each must have an area of
           <strong> 24 square units</strong>. Each side length must be a whole number from 1 to 8 units.

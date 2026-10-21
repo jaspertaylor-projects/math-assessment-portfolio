@@ -87,7 +87,7 @@ export const grade5Items = [
         <p><strong>Do not find the exact answers to the multiplication problems.</strong></p>
         <ol>
           <li>Is Amira right? Compare each answer with 24 to explain your thinking.</li>
-          <li>Use 24 again with two new fractions greater than 0. Make an example where the fraction with the larger numerator (top number) gives the smaller answer. Explain why, without finding the exact answers.</li>
+          <li>Use 24 again with two new fractions greater than 0. Make an example where the fraction with the larger numerator gives the smaller answer. Explain why, without finding the exact answers.</li>
           <li>Start with any number greater than 0. Write a rule for multiplying it by a fraction less than 1, equal to 1, or greater than 1. Use fractions greater than 0. Explain why your rule works in all three cases.</li>
         </ol>
       </>

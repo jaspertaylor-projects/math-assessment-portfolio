@@ -103,12 +103,11 @@ export const grade4Items = [
     points: 4,
     stem: (
       <>
-        <p>The top number in a fraction is the numerator. The bottom number is the denominator.</p>
         <p>Leo says this about fractions of the same whole:</p>
-        <blockquote className="quote">“When two fractions have different top numbers and different bottom numbers, the one with the larger top number is always greater.”</blockquote>
+        <blockquote className="quote">“When two fractions have different numerators and different denominators, the one with the larger numerator is always greater.”</blockquote>
         <p>
           Is Leo right? Make up your own pair of fractions that proves your answer. Use fractions of the same
-          whole, with different top numbers and different bottom numbers. Choose bottom numbers from 2, 3, 4,
+          whole, with different numerators and different denominators. Choose denominators from 2, 3, 4,
           6, 8, or 12.
         </p>
         <p>
@@ -117,7 +116,7 @@ export const grade4Items = [
         </p>
         <p>
           Explain what your example tells you about the word <strong>always</strong>. Then write a rule that
-          tells when looking only at the top numbers works. Explain why your rule works every time it applies.
+          tells when looking only at the numerators works. Explain why your rule works every time it applies.
         </p>
       </>
     ),
@@ -131,10 +130,10 @@ export const grade4Items = [
           the word “always” is wrong.
         </p>
         <p>
-          My rule is: for fractions of the same whole with the same bottom number, the fraction with the larger
-          top number is greater. The same bottom number means the parts are the same size. More parts of that
-          size always give more of the whole. If the bottom numbers are different, I can first write equal
-          fractions with the same bottom number.
+          My rule is: for fractions of the same whole with the same denominator, the fraction with the larger
+          numerator is greater. With a common denominator, the parts are the same size. More parts of that
+          size always give more of the whole. If the denominators are different, I can first write equal
+          fractions with the same denominator.
         </p>
       </>
     ),

@@ -86,7 +86,7 @@ export const grade4Items = [
       <>
         <p>Leo says, “A larger numerator always means a larger fraction.”</p>
         <p>
-          Is Leo right? Choose two fractions of the same whole with different numerators and denominators.
+          Is Leo right? Choose two fractions with different numerators and denominators.
           Use denominators from 2, 3, 4, 6, 8, or 12.
         </p>
         <p>

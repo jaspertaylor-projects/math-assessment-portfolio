@@ -1,16 +1,13 @@
-import { Nav, Hero, DokLevels, ItemsSection, Blueprint, Rationale, About, Footer } from './components/Sections.jsx'
+import { Nav, Hero, QuestionsSection, About, Footer } from './components/Sections.jsx'
 
 export default function App() {
   return (
     <>
-      <a href="#items" className="skip-link">Skip to items</a>
+      <a href="#questions" className="skip-link">Skip to sample questions</a>
       <Nav />
       <main>
         <Hero />
-        <DokLevels />
-        <ItemsSection />
-        <Blueprint />
-        <Rationale />
+        <QuestionsSection />
         <About />
       </main>
       <Footer />

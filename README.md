@@ -1,6 +1,6 @@
 # Math Assessment Portfolio
 
-A one-page portfolio of ten original Grades 3–5 mathematics assessment items written across all four levels of Webb's Depth of Knowledge. Each item has an answer key, distractor analysis, rubric, and design rationale.
+A one-page mathematics assessment portfolio featuring twelve written-response questions: one question at each Depth of Knowledge level (1–4) for each of grades 3, 4, and 5. Each includes a specific Common Core standard, a link to its source, alignment evidence, sample responses, and scoring guidance. DOK 4 questions are investigations completed across multiple sessions with review and revision.
 
 Built with React + Vite. Hosted for free on Cloudflare.
 
@@ -9,9 +9,10 @@ Built with React + Vite. Hosted for free on Cloudflare.
 | What | Where |
 | --- | --- |
 | Name, role, bio, email, LinkedIn | `src/site.config.js` |
-| The ten items (stems, answers, rubrics, DOK notes) | `src/data/items.jsx` |
+| The twelve questions, organized by grade | `src/data/grade3.jsx`, `src/data/grade4.jsx`, `src/data/grade5.jsx` |
+| Combined question collection | `src/data/items.jsx` |
 | DOK level descriptions | `src/data/dok.js` |
-| Design rationale and process copy | `src/components/Sections.jsx` (`PRINCIPLES`, `PROCESS`) |
+| Landing page and portfolio sections | `src/components/Sections.jsx` |
 | Colors, fonts, layout | `src/styles.css` (tokens at the top) |
 
 ## Run it locally

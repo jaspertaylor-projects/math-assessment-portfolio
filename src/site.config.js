@@ -7,14 +7,14 @@ export const site = {
   // Leave empty ('') to hide the LinkedIn button.
   linkedin: '',
   bio: [
-    'I write standards-aligned mathematics items for district benchmark and common assessments in Grades 3–5.',
-    'My focus is items that give teachers usable information: tight alignment to the standard, a deliberate Depth of Knowledge target, and distractors that reveal how students are thinking — not just whether they got it right.',
+    'I develop standards-aligned mathematics assessment questions for district benchmark and common assessments in grades 3–5.',
+    'My work emphasizes grade-level standards, Depth of Knowledge alignment, and written responses that reveal students’ mathematical thinking.',
   ],
   strengths: [
-    'Item writing & content review',
+    'Question writing & content review',
     'Depth of Knowledge alignment',
-    'Distractor design & item analysis',
-    'Rubrics & scorer calibration',
+    'Constructed responses & response analysis',
+    'Rubrics & scoring consistency',
     'Bias, sensitivity & accessibility review',
   ],
 }

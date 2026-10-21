@@ -26,7 +26,7 @@ function Rubric({ table }) {
   )
 }
 
-export function ItemCard({ item, open, onToggle }) {
+export function ItemCard({ item, open, onToggle, responses = {}, onResponseChange }) {
   const panelId = `item-${item.id}-key`
   return (
     <article className={`item-card dok-accent-${item.dok}`} id={`item-${item.id}`}>
@@ -38,7 +38,9 @@ export function ItemCard({ item, open, onToggle }) {
           <div className="item-meta">
             <span>Grade {item.grade}</span>
             <span className="dot" aria-hidden="true">·</span>
-            <span className="mono">{item.standard}</span>
+            <a className="mono" href={item.standardUrl} target="_blank" rel="noreferrer" aria-label={`Read standard ${item.standard}`}>
+              {item.standard}
+            </a>
             <span className="dot" aria-hidden="true">·</span>
             <span>{item.type}</span>
             <span className="dot" aria-hidden="true">·</span>
@@ -47,7 +49,7 @@ export function ItemCard({ item, open, onToggle }) {
             </span>
           </div>
           <h3>
-            <span className="sr-only">Item {item.id}: </span>
+            <span className="sr-only">Question {item.id}: </span>
             {item.title}
           </h3>
         </div>
@@ -55,14 +57,22 @@ export function ItemCard({ item, open, onToggle }) {
       </header>
 
       <div className="item-body">
+        {item.duration && <p className="task-duration">{item.duration}</p>}
         {item.stem}
         {item.blocks.map((b, i) => (
-          <Block key={i} block={b} itemId={item.id} revealed={open} />
+          <Block
+            key={i}
+            block={b}
+            itemId={item.id}
+            revealed={open}
+            response={responses[i]}
+            onResponseChange={(value) => onResponseChange?.(i, value)}
+          />
         ))}
       </div>
 
       <button type="button" className="reveal-toggle" aria-expanded={open} aria-controls={panelId} onClick={onToggle}>
-        <span>{open ? 'Hide answer key & rationale' : 'Show answer key & rationale'}</span>
+        <span>{open ? 'Hide answer key' : 'Show answer key'}</span>
         <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true">
           <path d="M5 8l5 5 5-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
         </svg>
@@ -83,15 +93,17 @@ export function ItemCard({ item, open, onToggle }) {
           </section>
           <section className="dok-why">
             <h5>
-              Why this is <DokBadge level={item.dok} />
+              Depth of Knowledge <DokBadge level={item.dok} />
             </h5>
             <p>{item.dokWhy}</p>
           </section>
           <section className="alignment">
             <h5>Standard alignment</h5>
             <p>
-              <span className="mono strong">{item.standard}</span> {item.standardText}
+              <a className="mono strong" href={item.standardUrl} target="_blank" rel="noreferrer">{item.standard}</a>{' '}
+              {item.standardText}
             </p>
+            {item.alignmentEvidence && <p>{item.alignmentEvidence}</p>}
             {item.secondary && (
               <p className="muted">
                 Also assesses <span className="mono">{item.secondary.join(', ')}</span>

@@ -156,15 +156,17 @@ function GridPaper() {
   )
 }
 
-function ResponseBlock({ block }) {
+function ResponseBlock({ block, response = '', onResponseChange }) {
   return (
     <div className="response">
       {block.prompt}
       {block.variant === 'grid' && <GridPaper />}
       <textarea
         className="response-box"
-        rows={block.variant === 'grid' ? 3 : 4}
+        rows={block.rows ?? (block.variant === 'grid' ? 3 : 4)}
         aria-label={block.label}
+        value={response}
+        onChange={(event) => onResponseChange?.(event.target.value)}
         placeholder={block.variant === 'grid' ? 'Write the perimeter and area of each rectangle…' : 'Type your response…'}
       />
     </div>

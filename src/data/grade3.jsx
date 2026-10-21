@@ -118,44 +118,35 @@ export const grade3Items = [
     secondary: ['3.MD.C.7b'],
     standardText: 'Solve perimeter problems, including rectangles with equal areas and different perimeters.',
     standardUrl: `${grade3Standards}#page=34`,
-    alignmentEvidence: 'Students construct equal-area rectangles, calculate different perimeter lengths, and use them to refute a claim.',
+    alignmentEvidence: 'Students choose their own rectangle examples and use the relationship between area and perimeter to evaluate a claim.',
     type: 'Constructed response',
     points: 4,
     stem: (
       <>
         <p>Nora says, “If two rectangles have the same area, their perimeters are always the same.”</p>
-        <p>
-          Is Nora right? Choose two different rectangles. Each must have an area of
-          <strong> 24 square units</strong>. Each side length must be a whole number from 1 to 8 units.
-          Turning a rectangle does not make a new rectangle.
-        </p>
-        <p>
-          For each rectangle, write its side lengths. Show how you find its area and perimeter.
-          Use your numbers to explain whether Nora is right.
-        </p>
+        <p>Is Nora right or wrong? Use examples to explain your answer.</p>
       </>
     ),
-    blocks: [{ kind: 'response', label: 'Grade 3, DOK 3: Give two rectangles, show your math, and explain whether Nora is right.' }],
+    blocks: [{ kind: 'response', label: 'Explain whether Nora is right or wrong using examples.' }],
     key: (
       <p>
-        <strong>Nora is wrong.</strong> A 3-by-8 rectangle and a 4-by-6 rectangle both have area 24 square
-        units, but their perimeters are 22 units and 20 units.
+        <strong>Nora is wrong.</strong> For example, a 2-by-6 rectangle and a 3-by-4 rectangle both have
+        area 12 square units, but their perimeters are 16 units and 14 units. Accept other valid examples.
       </p>
     ),
     sample: (
       <p>
-        My first rectangle has sides 3 and 8 units: 3 × 8 = 24 square units, and 3 + 8 + 3 + 8 = 22 units
-        around. My second has sides 4 and 6 units: 4 × 6 = 24 square units, and 4 + 6 + 4 + 6 = 20 units
-        around. Both areas are 24 square units, but 22 units around is different from 20 units around.
-        Nora is wrong because rectangles with the same area can have different perimeters.
+        Nora is wrong. A 2-by-6 rectangle has an area of 12 square units and a perimeter of 16 units.
+        A 3-by-4 rectangle also has an area of 12 square units, but its perimeter is 14 units.
+        These rectangles have the same area and different perimeters, so Nora’s claim is not always true.
       </p>
     ),
     rubric: [{
       title: 'Scoring rubric · 4 points total; add examples and argument scores',
       rows: [
-        { score: 'Examples · 2', text: 'Gives two permitted, noncongruent rectangles with area 24 and correctly calculates both areas and perimeters.' },
-        { score: 'Examples · 1', text: 'Chooses a valid pair but has one calculation error or omission, or completely calculates only one valid rectangle.' },
-        { score: 'Examples · 0', text: 'Gives no valid rectangle with sufficient calculations, or gives no response.' },
+        { score: 'Examples · 2', text: 'Provides valid rectangle examples with equal areas and different perimeters, supported by accurate dimensions, calculations, or labeled drawings. No particular area or side lengths are required.' },
+        { score: 'Examples · 1', text: 'Offers relevant rectangle examples with a minor error or missing evidence, or supports only one valid rectangle.' },
+        { score: 'Examples · 0', text: 'Provides no mathematically usable rectangle examples or no response.' },
         { score: 'Argument · 2', text: 'Rejects the claim and explicitly explains that matching areas with different perimeters form a counterexample to “always.”' },
         { score: 'Argument · 1', text: 'Rejects the claim with relevant area/perimeter evidence, but the connection between the examples and the general claim is incomplete.' },
         { score: 'Argument · 0', text: 'Accepts the claim or gives no mathematically relevant argument.' },

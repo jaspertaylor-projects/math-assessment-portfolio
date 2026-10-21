@@ -57,7 +57,6 @@ export function ItemCard({ item, open, onToggle, responses = {}, onResponseChang
       </header>
 
       <div className="item-body">
-        {item.duration && <p className="task-duration">{item.duration}</p>}
         {item.stem}
         {item.blocks.map((b, i) => (
           <Block

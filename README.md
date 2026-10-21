@@ -1,6 +1,6 @@
 # Math Assessment Portfolio
 
-A one-page mathematics assessment portfolio featuring twelve written-response questions: one question at each Depth of Knowledge level (1–4) for each of grades 3, 4, and 5. Each includes a specific Common Core standard, a link to its source, alignment evidence, sample responses, and scoring guidance. DOK 4 questions are investigations completed across multiple sessions with review and revision.
+A one-page mathematics assessment portfolio featuring nine written-response questions: one question at each Depth of Knowledge level (1–3) for each of grades 3, 4, and 5. Each includes a specific Common Core standard, a link to its source, alignment evidence, sample responses, and scoring guidance.
 
 Built with React + Vite. Hosted for free on Cloudflare.
 
@@ -9,7 +9,7 @@ Built with React + Vite. Hosted for free on Cloudflare.
 | What | Where |
 | --- | --- |
 | Name, role, bio, email, LinkedIn | `src/site.config.js` |
-| The twelve questions, organized by grade | `src/data/grade3.jsx`, `src/data/grade4.jsx`, `src/data/grade5.jsx` |
+| The nine questions, organized by grade | `src/data/grade3.jsx`, `src/data/grade4.jsx`, `src/data/grade5.jsx` |
 | Combined question collection | `src/data/items.jsx` |
 | DOK level descriptions | `src/data/dok.js` |
 | Landing page and portfolio sections | `src/components/Sections.jsx` |

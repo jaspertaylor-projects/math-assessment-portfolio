@@ -4,7 +4,7 @@ import { items } from '../data/items.jsx'
 import { DOK } from '../data/dok.js'
 import { ItemCard } from './ItemCard.jsx'
 
-const LEVELS = [1, 2, 3, 4]
+const LEVELS = [1, 2, 3]
 const GRADES = [3, 4, 5]
 
 function initials(name) {
@@ -45,8 +45,8 @@ export function Hero() {
           </p>
           <h1>Math assessment questions for grades <span className="grade-range">3–5.</span></h1>
           <p className="lede">
-            Twelve standards-aligned written-response questions. Each grade includes one question at each
-            Depth of Knowledge (DOK) level, from 1 to 4, with sample responses and scoring rubrics.
+            Nine standards-aligned written-response questions. Each grade includes one question at each
+            Depth of Knowledge (DOK) level, from 1 to 3, with sample responses and scoring rubrics.
           </p>
           <div className="hero-cta">
             <a className="btn btn-primary" href="#questions">View sample questions</a>
@@ -54,7 +54,7 @@ export function Hero() {
           <dl className="stats">
             <div><dt>Sample questions</dt><dd>{items.length}</dd></div>
             <div><dt>Grades</dt><dd>3–5</dd></div>
-            <div><dt>DOK levels</dt><dd>1–4</dd></div>
+            <div><dt>DOK levels</dt><dd>1–3</dd></div>
           </dl>
         </div>
         <div className="ladder" aria-label="Questions by Depth of Knowledge level">
@@ -122,11 +122,11 @@ export function QuestionsSection() {
     <section className="section" id="questions" aria-labelledby="questions-heading">
       <div className="container narrow">
         <div className="section-head">
-          <p className="eyebrow">Grades 3–5 · DOK 1–4</p>
+          <p className="eyebrow">Grades 3–5 · DOK 1–3</p>
           <h2 id="questions-heading">Sample assessment questions</h2>
           <p className="section-lede">
-            Four questions per grade: a short response, two constructed responses, and an extended
-            investigation. Each includes a specific Common Core standard and scoring guidance.
+            Three questions per grade: a short response and two constructed responses. Each includes
+            a specific Common Core standard and scoring guidance.
           </p>
         </div>
 
@@ -174,8 +174,7 @@ export function QuestionsSection() {
           )}
         </div>
         <p className="footnote">
-          Standards: Common Core State Standards for Mathematics. DOK 4 questions are extended tasks
-          completed across several days.
+          Standards: Common Core State Standards for Mathematics.
         </p>
       </div>
     </section>

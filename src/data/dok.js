@@ -17,10 +17,4 @@ export const DOK = {
     desc: 'Reason with evidence: justify a conclusion, critique an argument, or generalize from cases.',
     verbs: ['justify', 'critique', 'explain why', 'generalize'],
   },
-  4: {
-    name: 'Extended Thinking',
-    short: 'Extended Thinking',
-    desc: 'Synthesize multiple sources and conditions over extended time, with more than one defensible solution.',
-    verbs: ['design', 'synthesize', 'recommend', 'revise'],
-  },
 }

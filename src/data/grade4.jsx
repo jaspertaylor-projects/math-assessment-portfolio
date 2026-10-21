@@ -1,5 +1,3 @@
-import { Frac } from '../components/Math.jsx'
-
 export const grade4Items = [
   {
     id: 4,
@@ -40,55 +38,38 @@ export const grade4Items = [
     id: 5,
     grade: 4,
     dok: 2,
-    domain: 'Number & Operations — Fractions',
-    standard: '4.NF.A.1',
-    standardText: 'Explain equivalent fractions with a fraction model, including how the number and size of equal parts change.',
-    standardUrl: 'https://www.thecorestandards.org/Math/Content/4/NF/A/1/',
-    alignmentEvidence: 'The student repartitions a fraction-strip model and explains why multiplying both counts by three preserves the shaded amount.',
+    domain: 'Number & Operations in Base Ten',
+    standard: '4.NBT.B.5',
+    standardText: 'Multiply multi-digit whole numbers using place value and properties of operations; show and explain the calculation.',
+    standardUrl: 'https://www.thecorestandards.org/Math/Content/4/NBT/B/5/',
+    alignmentEvidence: 'Students multiply two two-digit numbers and explain how their calculation uses place value.',
     type: 'Constructed response',
     points: 3,
     stem: (
       <>
-        <p>The strip is one whole. <Frac n={3} d={4} /> of it is shaded.</p>
-        <figure>
-          <svg viewBox="0 0 324 76" role="img" aria-labelledby="grade4-fraction-strip-title" style={{ width: '100%', maxWidth: '24rem', height: 'auto' }}>
-            <title id="grade4-fraction-strip-title">One rectangular strip divided into four equal parts. Three parts are shaded.</title>
-            <rect x="12" y="12" width="300" height="48" fill="#fff" />
-            <rect x="12" y="12" width="225" height="48" fill="#acc4ac" />
-            <rect x="12" y="12" width="300" height="48" fill="none" stroke="#284d3b" strokeWidth="2" />
-            <path d="M87 12V60 M162 12V60 M237 12V60" stroke="#284d3b" strokeWidth="2" />
-          </svg>
-          <figcaption>Three of four equal parts are shaded.</figcaption>
-        </figure>
-        <p>
-          Imagine splitting <strong>each fourth into 3 equal smaller parts</strong>. Keep the whole strip and
-          the shaded amount the same.
-        </p>
-        <p>What fraction of the strip is shaded now? Write an equation to show that the two fractions are equal.</p>
-        <p>Tell how the number of parts and the size of each part change. Explain why both fractions show the same amount.</p>
+        <p>A school orders 24 boxes of pencils. Each box has 36 pencils.</p>
+        <p>How many pencils does the school order? Show your work and explain how place value helps you multiply.</p>
       </>
     ),
-    blocks: [{ kind: 'response', label: 'Write your fraction, equation, and explanation about the strip.' }],
-    key: <p><Frac n={3} d={4} /> = <Frac n={9} d={12} />. There are 12 equal parts in all, with 9 shaded.</p>,
+    blocks: [{ kind: 'response', label: 'Find the total number of pencils. Show your work and explain your place-value thinking.' }],
+    key: <p><strong>864 pencils.</strong> 24 × 36 = 864. Accept any valid place-value method with an explanation.</p>,
     sample: (
       <p>
-        Each fourth is split into 3 smaller equal parts. There are 4 × 3 = 12 equal parts in the whole strip
-        and 3 × 3 = 9 shaded parts. So 3/4 = 9/12. There are more pieces, and each piece is smaller. The same
-        amount of the same strip is still shaded, so the fractions are equal.
+        I split 36 into 30 and 6. I found 24 × 30 = 720 and 24 × 6 = 144.
+        Then I added 720 + 144 = 864 pencils. Since 30 is 3 tens, 24 × 30 is
+        72 tens, or 720. That is why I used 720 instead of 72.
       </p>
     ),
-    rubric: [
-      {
-        title: 'Scoring rubric — 3 points total',
-        rows: [
-          { score: '1 — Equation', text: 'Writes the correct equivalent fraction 9/12 and an equality relating it to 3/4.' },
-          { score: '1 — Model', text: 'Explains that each fourth becomes three smaller equal parts, giving 12 equal parts in all and 9 shaded parts.' },
-          { score: '1 — Reasoning', text: 'Explains that the smaller parts cover the same shaded region of the same whole, so the value stays equal.' },
-          { score: '0', text: 'Award 0 for each criterion without correct supporting evidence; a blank or unrelated response earns 0 total.' },
-        ],
-      },
-    ],
-    dokWhy: 'Connects a repartitioned visual model, an equation, and an explanation of fraction equivalence.',
+    rubric: [{
+      title: 'Scoring rubric · 3 points total; add the three criteria',
+      rows: [
+        { score: 'Answer · 1', text: 'Finds 864 pencils.' },
+        { score: 'Method · 1', text: 'Shows a valid place-value method for 24 × 36, using equations, an area model, or a correctly organized algorithm. A minor arithmetic error does not lose this point if the place-value structure is correct.' },
+        { score: 'Explanation · 1', text: 'Explains a place-value relationship used in the calculation, such as why 24 × 30 gives 72 tens rather than 72 ones. Accept equivalent reasoning for another valid method.' },
+        { score: '0 per criterion', text: 'Award 0 for each criterion that is missing or incorrect. A blank or unrelated response earns 0 total.' },
+      ],
+    }],
+    dokWhy: 'Students connect a multi-digit multiplication method to the value of its digits and explain why their calculation works.',
   },
   {
     id: 6,

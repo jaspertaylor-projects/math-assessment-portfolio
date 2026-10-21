@@ -47,7 +47,7 @@ export const grade3Items = [
     standard: '3.NF.A.3b',
     standardText: 'Find simple equivalent fractions and explain why they are equal using a fraction model.',
     standardUrl: 'https://www.thecorestandards.org/Math/Content/3/NF/A/3/b/',
-    alignmentEvidence: 'Students generate three fractions equivalent to 2/4 and explain why they represent the same part of the whole.',
+    alignmentEvidence: 'Students generate two fractions equivalent to 2/4 and explain why they represent the same part of the whole.',
     type: 'Constructed response',
     points: 3,
     stem: (
@@ -61,29 +61,28 @@ export const grade3Items = [
             <path d="M90 10V170 M10 90H170" fill="none" stroke="var(--ink)" strokeWidth="2" />
           </svg>
         </figure>
-        <p>Write 3 different fractions that are equivalent to <Frac n={2} d={4} />. Explain why your fractions show the same amount.</p>
+        <p>Write 2 different fractions that are equivalent to <Frac n={2} d={4} />. Explain why your fractions show the same amount.</p>
       </>
     ),
-    blocks: [{ kind: 'response', label: 'Write 3 different fractions equivalent to 2/4 and explain why they are equal.' }],
+    blocks: [{ kind: 'response', label: 'Write 2 different fractions equivalent to 2/4 and explain why they are equal.' }],
     key: (
       <p>
-        Possible answers: <Frac n={1} d={2} />, <Frac n={3} d={6} />, and <Frac n={4} d={8} />.
-        Accept any three different fractions equivalent to 2/4, with a correct explanation.
+        Possible answers: <Frac n={1} d={2} /> and <Frac n={3} d={6} />.
+        Accept any two different fractions equivalent to 2/4, with a correct explanation.
       </p>
     ),
     sample: (
       <p>
-        My fractions are 1/2, 3/6, and 4/8. The shaded part is half the square.
+        My fractions are 1/2 and 3/6. The shaded part is half the square.
         If I split each half into 3 equal parts, 3 of the 6 parts are shaded.
-        If I split each half into 4 equal parts, 4 of the 8 parts are shaded.
-        All three fractions show the same amount as 2/4.
+        Both fractions show the same amount as 2/4.
       </p>
     ),
     rubric: [{
       title: 'Scoring rubric · 3 points total; add fractions and explanation scores',
       rows: [
-        { score: 'Fractions · 2', text: 'Writes three different fractions equivalent to 2/4, such as 1/2, 3/6, and 4/8.' },
-        { score: 'Fractions · 1', text: 'Writes only one or two different correct fractions. Repeated fractions count once.' },
+        { score: 'Fractions · 2', text: 'Writes two different fractions equivalent to 2/4, such as 1/2 and 3/6.' },
+        { score: 'Fractions · 1', text: 'Writes only one correct fraction, or repeats the same correct fraction twice.' },
         { score: 'Fractions · 0', text: 'Gives no correct fraction or no answer.' },
         { score: 'Explanation · 1', text: 'Uses the picture or describes equal parts to explain why the fractions represent the same shaded amount of the same whole.' },
         { score: 'Explanation · 0', text: 'Gives no correct picture-based explanation, or gives no response.' },

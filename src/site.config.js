@@ -1,9 +1,9 @@
 // Edit this file to personalize the site. Everything else reads from here.
 export const site = {
-  name: 'Your Name',
+  name: 'Jonas Smead',
   role: 'Mathematics Assessment Developer',
   focus: 'Grades 3–5',
-  email: 'you@example.com',
+  email: 'jonassmead@gmail.com',
   // Leave empty ('') to hide the LinkedIn button.
   linkedin: '',
   bio: [

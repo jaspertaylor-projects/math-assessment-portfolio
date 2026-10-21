@@ -44,49 +44,47 @@ export const grade3Items = [
     grade: 3,
     dok: 2,
     domain: 'Number & Operations — Fractions',
-    standard: '3.NF.A.3d',
-    standardText: 'Compare fractions with matching numerators or denominators, using the same whole; record and justify the comparison.',
-    standardUrl: `${grade3Standards}#page=33`,
-    alignmentEvidence: 'Students compare 3/8 and 3/4 of equal-length wholes and explain the unequal unit-fraction sizes.',
+    standard: '3.NF.A.3b',
+    standardText: 'Find simple equivalent fractions and explain why they are equal using a fraction model.',
+    standardUrl: 'https://www.thecorestandards.org/Math/Content/3/NF/A/3/b/',
+    alignmentEvidence: 'Students rename the shaded 2/4 as 1/2 and explain how the same shaded area represents both fractions.',
     type: 'Constructed response',
     points: 3,
     stem: (
       <>
-        <p>
-          Ada and Ben each have a ribbon. The ribbons are the <strong>same length</strong>.
-          Ada colors <Frac n={3} d={8} /> of her ribbon. Ben colors <Frac n={3} d={4} /> of his ribbon.
-        </p>
-        <p>
-          Who colors more ribbon? Write <Frac n={3} d={8} /> and <Frac n={3} d={4} /> with
-          &lt;, &gt;, or = between them.
-        </p>
-        <p>
-          Describe two strips that are the same length, one for each ribbon. Tell how many equal parts
-          each strip has and how many parts you would color. Explain why one person colors more,
-          even though both color 3 parts.
-        </p>
+        <p>The square has 4 equal parts. 2 parts are shaded.</p>
+        <figure>
+          <svg viewBox="0 0 180 180" role="img" aria-labelledby="grade3-equivalent-square" style={{ width: '100%', maxWidth: '12rem', height: 'auto' }}>
+            <title id="grade3-equivalent-square">A square split into four equal small squares. The two top squares are shaded. The two bottom squares are not shaded.</title>
+            <rect x="10" y="10" width="160" height="160" fill="var(--surface)" />
+            <rect x="10" y="10" width="160" height="80" fill="var(--dok2)" fillOpacity="0.35" />
+            <rect x="10" y="10" width="160" height="160" fill="none" stroke="var(--ink)" strokeWidth="2" />
+            <path d="M90 10V170 M10 90H170" fill="none" stroke="var(--ink)" strokeWidth="2" />
+          </svg>
+        </figure>
+        <p>Write a fraction equal to <Frac n={2} d={4} /> with <strong>2 as the bottom number</strong>.</p>
+        <p>Use the picture to explain why the fractions are equal.</p>
       </>
     ),
-    blocks: [{ kind: 'response', label: 'Grade 3, DOK 2: Tell who colors more. Use a math sign and describe two ribbon strips to explain.' }],
-    key: <p><strong>Ben colors more.</strong> <Frac n={3} d={8} /> &lt; <Frac n={3} d={4} />.</p>,
+    blocks: [{ kind: 'response', label: 'Write your equal fraction and explain using the picture.' }],
+    key: <p><strong><Frac n={1} d={2} />.</strong> <Frac n={2} d={4} /> = <Frac n={1} d={2} />.</p>,
     sample: (
       <p>
-        Ben colors more. I would use two strips that are the same length. I would split Ada’s strip into
-        8 equal parts and color 3. I would split Ben’s strip into 4 equal parts and color 3. Each fourth is
-        bigger than each eighth. Ben’s 3 parts cover more ribbon, so 3/8 &lt; 3/4.
+        The 2 shaded parts fill the top half of the square. They make 1 of the 2 equal rows.
+        So 2/4 and 1/2 show the same amount of the square.
       </p>
     ),
     rubric: [{
-      title: 'Scoring rubric · 3 points total; add comparison and model scores',
+      title: 'Scoring rubric · 3 points total; add answer and explanation scores',
       rows: [
-        { score: 'Comparison · 1', text: 'Writes 3/8 < 3/4 or 3/4 > 3/8 and identifies Ben as coloring more.' },
-        { score: 'Comparison · 0', text: 'The symbolic comparison or identification is incorrect, or the comparison is missing.' },
-        { score: 'Model · 2', text: 'Describes equal-length wholes split into 8 and 4 equal parts, with 3 parts colored in each, and explains that fourths are larger pieces.' },
-        { score: 'Model · 1', text: 'Gives a correct equal-strip description or a correct piece-size explanation, but does not connect both.' },
-        { score: 'Model · 0', text: 'Provides no correct model or size reasoning; compares only the whole-number denominators, or gives no response.' },
+        { score: 'Answer · 1', text: 'Writes 1/2 as the equal fraction with denominator 2.' },
+        { score: 'Answer · 0', text: 'Gives another fraction or no answer.' },
+        { score: 'Explanation · 2', text: 'Explains that the two shaded fourths together make one of two equal halves of the same square, such as one of its two equal rows.' },
+        { score: 'Explanation · 1', text: 'Gives a correct observation about the shaded parts, but does not connect two fourths to one of two equal halves of the whole.' },
+        { score: 'Explanation · 0', text: 'Gives no correct picture-based explanation, or gives no response.' },
       ],
     }],
-    dokWhy: 'The comparison requires connecting equal wholes, partition size, and the same number of selected parts.',
+    dokWhy: 'Students connect two ways of grouping the same shaded area and explain why the fractions have equal value.',
   },
   {
     id: 3,

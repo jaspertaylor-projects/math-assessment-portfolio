@@ -92,12 +92,16 @@ export const grade4Items = [
         <p>
           Compare them using &lt;, &gt;, or =. Explain your comparison and what it shows about Leo’s claim.
         </p>
-        <p>
-          When does comparing numerators work? Write a rule and explain why.
-        </p>
       </>
     ),
-    blocks: [{ kind: 'response', label: 'Write your fractions, comparison, explanation, and new rule.' }],
+    blocks: [
+      { kind: 'drawing-models', bars: true, prompt: <p>Partition and shade the bars to show your two fractions.</p> },
+      {
+        kind: 'response',
+        inputLabel: 'Write your fractions, comparison, explanation, and new rule.',
+        prompt: <p>When does comparing numerators work? Write a rule and explain why.</p>,
+      },
+    ],
     key: <p>The claim is false. A valid counterexample must have different numerators and denominators, with the greater numerator belonging to the smaller or equal fraction. A corrected rule must specify equal-sized fractional parts of the same whole.</p>,
     sample: (
       <>

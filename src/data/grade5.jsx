@@ -40,7 +40,7 @@ export const grade5Items = [
     standard: '5.NF.B.4a',
     standardUrl: 'https://www.thecorestandards.org/Math/Content/5/NF/B/4/a/',
     standardText: 'Interpret multiplication by a fraction as taking equal parts of a quantity, including a fractional quantity.',
-    alignmentEvidence: 'The equation and equal-parts explanation interpret three fourths of two thirds of one original pan.',
+    alignmentEvidence: 'The equation and model interpret three fourths of two thirds of one original pan.',
     type: 'Constructed response',
     points: 3,
     stem: (
@@ -49,11 +49,14 @@ export const grade5Items = [
         <p>What fraction of the <strong>full pan</strong> does Sam eat?</p>
         <ol>
           <li>Write your answer and an equation that shows your thinking.</li>
-          <li>Explain your answer using equal-size pieces of the full pan. You can describe the pieces in words.</li>
+          <li>Draw a model to show what fraction of the full pan Sam eats.</li>
         </ol>
       </>
     ),
-    blocks: [{ kind: 'response', label: 'Grade 5 DOK 2: write the fraction Sam eats, an equation, and how equal-size pieces of the full pan show your answer.' }],
+    blocks: [
+      { kind: 'response', inputLabel: 'Part 1: Write your answer and equation.', prompt: <p><strong>Part 1</strong></p> },
+      { kind: 'drawing-models', label: 'Part 2', labels: ['Full pan'] },
+    ],
     key: <p>Sam eats <strong>one half of the original pan</strong>: <Frac n={3} d={4} /> × <Frac n={2} d={3} /> = <Frac n={6} d={12} /> = <Frac n={1} d={2} />.</p>,
     sample: (
       <p>Imagine dividing the full pan into 12 equal pieces. The two thirds left is 8 pieces. Divide those 8 pieces into 4 equal groups of 2 pieces each. Sam eats 3 groups, or 6 pieces. That is 6 out of the original 12 pieces, so he eats one half of the full pan.</p>
@@ -63,11 +66,11 @@ export const grade5Items = [
       rows: [
         { score: 'Equation · 1', text: 'Represents the situation with 3/4 × 2/3, or an equivalent equation that takes three of four equal parts of 2/3.' },
         { score: 'Answer · 1', text: 'Identifies 1/2 of the original pan; an equivalent fraction is accepted.' },
-        { score: 'Explanation · 1', text: 'Describes equal-size parts and connects the portion eaten to the original whole, rather than stating only a multiplication rule.' },
+        { score: 'Model · 1', text: 'Draws equal-size parts of the full pan and shows both the 2/3 left and the 3/4 of that amount eaten (6/12 or 1/2 of the full pan).' },
         { score: '0 per criterion', text: 'Award 0 for each criterion that is absent or incorrect. No response earns 0 total.' },
       ],
     }],
-    dokWhy: 'Represent a fraction of a fraction and connect the calculation to an equal-parts explanation.',
+    dokWhy: 'Represent a fraction of a fraction and connect the calculation to a model of the original whole.',
   },
   {
     id: 9,
@@ -77,7 +80,7 @@ export const grade5Items = [
     standard: '5.NF.B.5',
     standardUrl: 'https://www.thecorestandards.org/Math/Content/5/NF/',
     standardText: 'Reason about multiplication as scaling: compare products using a factor’s size relative to 1, and explain why a positive quantity grows, shrinks, or stays the same.',
-    alignmentEvidence: 'Students compare products without calculating them, construct a counterexample, and explain the effect of fraction factors below, equal to, and above 1.',
+    alignmentEvidence: 'Students compare products without calculating them and explain the effect of fraction factors below, equal to, and above 1.',
     type: 'Constructed response',
     points: 4,
     stem: (
@@ -87,18 +90,16 @@ export const grade5Items = [
         <p><strong>Do not find the exact answers to the multiplication problems.</strong></p>
         <ol>
           <li>Is Amira right? Compare each answer with 24 to explain your thinking.</li>
-          <li>Use 24 again with two new fractions greater than 0. Make an example where the fraction with the larger numerator gives the smaller answer. Explain why, without finding the exact answers.</li>
           <li>Start with any number greater than 0. Write a rule for multiplying it by a fraction less than 1, equal to 1, or greater than 1. Use fractions greater than 0. Explain why your rule works in all three cases.</li>
         </ol>
       </>
     ),
-    blocks: [{ kind: 'response', label: 'Grade 5 DOK 3: explain whether Amira is right, make your own example, and explain your rule for all three cases.' }],
+    blocks: [{ kind: 'response', label: 'Grade 5 DOK 3: explain whether Amira is right and explain your rule for all three cases.' }],
     key: (
       <p>Amira is incorrect. Since <Frac n={7} d={8} /> is less than 1, its product with 24 is less than 24. Since <Frac n={5} d={4} /> is greater than 1, its product with 24 is greater than 24. Therefore 24 × <Frac n={7} d={8} /> &lt; 24 × <Frac n={5} d={4} />.</p>
     ),
     sample: (
       <>
-        <p>My example is 24 × 9/10 and 24 × 3/2. Even though 9 is greater than 3, nine tenths means less than one full group of 24. Three halves means more than one full group of 24. So 24 × 9/10 is smaller.</p>
         <p>Start with a number greater than 0 and use a fraction greater than 0. A fraction less than 1 gives less than one full group, so the answer is smaller than the starting number. A fraction equal to 1 gives exactly one full group, so the answer stays the same. A fraction greater than 1 gives more than one full group, so the answer is larger.</p>
       </>
     ),
@@ -107,11 +108,11 @@ export const grade5Items = [
       rows: [
         { score: 'Comparison · 1', text: 'Rejects Amira’s claim and correctly orders the two given products.' },
         { score: 'Justification · 1', text: 'Explains why the first product is below 24 and the second is above 24 using the fraction factors relative to 1, without relying on exact products.' },
-        { score: 'Counterexample · 1', text: 'Creates a different valid pair with a larger numerator but a smaller product, and justifies the comparison through scaling without exact multiplication.' },
-        { score: 'Rule · 1', text: 'States and explains all three cases correctly for a positive starting number and positive fraction factors: less than 1, equal to 1, and greater than 1.' },
-        { score: '0 per criterion', text: 'Award 0 for each criterion that is absent or incorrect. Exact products alone do not earn the justification or counterexample points. No response earns 0 total.' },
+        { score: 'Rule · 1', text: 'States all three cases correctly for a positive starting number and positive fraction factors: less than 1, equal to 1, and greater than 1.' },
+        { score: 'Reasoning · 1', text: 'Explains all three cases using less than one full group, exactly one full group, and more than one full group of the starting quantity.' },
+        { score: '0 per criterion', text: 'Award 0 for each criterion that is absent or incorrect. Exact products alone do not earn the justification or reasoning points. No response earns 0 total.' },
       ],
     }],
-    dokWhy: 'Critique a claim, create a counterexample, and defend a general rule using the structure of multiplication.',
+    dokWhy: 'Critique a claim and defend a general rule using the structure of multiplication.',
   },
 ]

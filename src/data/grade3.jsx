@@ -47,7 +47,7 @@ export const grade3Items = [
     standard: '3.NF.A.3b',
     standardText: 'Find simple equivalent fractions and explain why they are equal using a fraction model.',
     standardUrl: 'https://www.thecorestandards.org/Math/Content/3/NF/A/3/b/',
-    alignmentEvidence: 'Students generate two fractions equivalent to 2/4 and use a provided or student-drawn model to show the equivalence.',
+    alignmentEvidence: 'Students generate two fractions equivalent to 2/4 and use a provided model to show the equivalence.',
     type: 'Constructed response',
     points: 4,
     stem: (
@@ -74,8 +74,8 @@ export const grade3Items = [
       {
         kind: 'fraction-model',
         label: 'Part 2',
-        inputLabel: 'Part 2: Use the provided model or draw your own to show equivalent fractions.',
-        prompt: <p>Use the model below or draw your own model on paper to show why your fractions are equivalent to <Frac n={2} d={4} />. Select a part of the model below to shade or unshade it.</p>,
+        inputLabel: 'Part 2: Use the provided model to show equivalent fractions.',
+        prompt: <p>Use the model below to show why your fractions are equivalent to <Frac n={2} d={4} />. Select a part of the model below to shade or unshade it.</p>,
         rows: 2,
         columns: 4,
         answerShaded: 4,
@@ -84,7 +84,7 @@ export const grade3Items = [
     key: (
       <>
         <p><strong>Part 1:</strong> Possible answers are <Frac n={1} d={2} /> and <Frac n={3} d={6} />. Accept any two different fractions equivalent to 2/4.</p>
-        <p><strong>Part 2:</strong> Accept either the provided model with any 4 of its 8 parts shaded, or a correctly drawn model showing the equivalence. For example, a student could draw equal-sized wholes showing 1/2 and 3/6 covering the same amount as 2/4. Leaving the provided model blank does not lose credit when a valid drawing is supplied.</p>
+        <p><strong>Part 2:</strong> Shade any 4 of the 8 equal parts in the provided model to match the amount shown by 2/4.</p>
       </>
     ),
     sample: (
@@ -99,12 +99,12 @@ export const grade3Items = [
         { score: 'Fractions · 2', text: 'Writes two different fractions equivalent to 2/4, such as 1/2 and 3/6.' },
         { score: 'Fractions · 1', text: 'Writes only one correct fraction, or repeats the same correct fraction twice.' },
         { score: 'Fractions · 0', text: 'Gives no correct fraction or no answer.' },
-        { score: 'Model · 2', text: 'Uses the provided model with exactly 4 of 8 parts shaded, or supplies a correct drawing with equal partitions and shading or labels that demonstrate equivalence to 2/4. Either approach earns full credit.' },
-        { score: 'Model · 1', text: 'Shows a relevant model, but a minor partitioning, shading, or labeling error makes the equivalence incomplete or unclear.' },
-        { score: 'Model · 0', text: 'Provides no usable model through either the interactive model or a drawing.' },
+        { score: 'Model · 2', text: 'Uses the provided model with exactly 4 of 8 parts shaded to show equivalence to 2/4.' },
+        { score: 'Model · 1', text: 'Shades the provided model, but an error makes the equivalence incomplete or unclear.' },
+        { score: 'Model · 0', text: 'Provides no usable model.' },
       ],
     }],
-    dokWhy: 'Students generate equivalent fractions and demonstrate equal value by completing or drawing a fraction model.',
+    dokWhy: 'Students generate equivalent fractions and demonstrate equal value by completing a fraction model.',
   },
   {
     id: 3,
@@ -121,7 +121,7 @@ export const grade3Items = [
     stem: (
       <>
         <p>Nora says, “If two rectangles have the same area, their perimeters are always the same.”</p>
-        <p>Is Nora right or wrong? Explain your answer with 2 or more examples that prove whether Nora is right or wrong.</p>
+        <p>Is Nora right or wrong? Explain your answer with 2 or more examples.</p>
       </>
     ),
     blocks: [{ kind: 'response', label: 'Explain whether Nora is right or wrong using 2 or more examples.' }],

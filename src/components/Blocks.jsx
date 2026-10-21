@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Shape } from './Shapes.jsx'
+import { DrawingModelsBlock } from './DrawingModels.jsx'
 
 function ChoiceBlock({ block, itemId, revealed, response, onResponseChange }) {
   const selected = Array.isArray(response) ? response : []
@@ -238,6 +239,7 @@ const RENDERERS = {
   matrix: MatrixBlock,
   response: ResponseBlock,
   'fraction-model': FractionModelBlock,
+  'drawing-models': DrawingModelsBlock,
   sources: SourcesBlock,
 }
 

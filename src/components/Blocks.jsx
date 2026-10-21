@@ -193,12 +193,11 @@ function FractionModelBlock({ block, revealed, response, onResponseChange }) {
               key={index}
               type="button"
               className={`fraction-model-cell${selected.includes(index) ? ' is-shaded' : ''}`}
-              aria-label={`Row ${Math.floor(index / block.columns) + 1}, column ${index % block.columns + 1}: 1/${total}`}
+              aria-label={`Row ${Math.floor(index / block.columns) + 1}, column ${index % block.columns + 1}`}
               aria-pressed={selected.includes(index)}
               onClick={() => toggle(index)}
             >
-              <span className="fraction-model-unit" aria-hidden="true">1/{total}</span>
-              {selected.includes(index) && <span className="fraction-model-check" aria-hidden="true">✓</span>}
+              {selected.includes(index) && <span aria-hidden="true">✓</span>}
             </button>
           ))}
         </div>

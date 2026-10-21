@@ -55,17 +55,11 @@ export const grade3Items = [
         <p>The model shows <Frac n={2} d={4} />.</p>
         <figure>
           <svg viewBox="9 9 162 162" role="img" aria-labelledby="grade3-equivalent-square" style={{ width: '100%', maxWidth: '12rem', height: 'auto' }}>
-            <title id="grade3-equivalent-square">A square split into four equal parts, each labeled 1/4. The two top parts are shaded. The two bottom parts are not shaded.</title>
+            <title id="grade3-equivalent-square">A square split into four equal parts. The two top parts are shaded. The two bottom parts are not shaded.</title>
             <rect x="10" y="10" width="160" height="160" fill="var(--surface)" />
             <rect x="10" y="10" width="160" height="80" fill="var(--dok2)" fillOpacity="0.35" />
             <rect x="10" y="10" width="160" height="160" fill="none" stroke="var(--ink)" strokeWidth="2" />
             <path d="M90 10V170 M10 90H170" fill="none" stroke="var(--ink)" strokeWidth="2" />
-            <g fill="var(--ink)" fontSize="16" textAnchor="middle" dominantBaseline="middle" aria-hidden="true">
-              <text x="50" y="50">1/4</text>
-              <text x="130" y="50">1/4</text>
-              <text x="50" y="130">1/4</text>
-              <text x="130" y="130">1/4</text>
-            </g>
           </svg>
         </figure>
       </>

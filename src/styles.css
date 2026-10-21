@@ -369,8 +369,6 @@ a { color: var(--brand); }
   border: 1px solid var(--ink); border-radius: 0;
   background: var(--surface); color: var(--ink); cursor: pointer; font-size: 1.2rem;
 }
-.fraction-model-unit { font-size: 1rem; }
-.fraction-model-check { position: absolute; top: 4px; right: 4px; font-size: 0.75rem; }
 .fraction-model-cell.is-shaded { background: color-mix(in srgb, var(--dok2) 35%, var(--surface)); }
 .fraction-model-cell:focus-visible { position: relative; z-index: 1; outline-offset: -4px; }
 .fraction-model-caption { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; margin-top: 8px; font-size: 0.85rem; color: var(--ink-2); }

@@ -98,7 +98,12 @@ export const grade4Items = [
       { kind: 'drawing-models', bars: true, prompt: <p>Partition and shade the bars to show your two fractions.</p> },
       {
         kind: 'response',
-        inputLabel: 'Write your fractions, comparison, explanation, and new rule.',
+        inputLabel: 'Is Leo right? Write your comparison and explain your answer.',
+        prompt: <p>Is Leo right? Write your comparison and explain your answer.</p>,
+      },
+      {
+        kind: 'response',
+        inputLabel: 'When does comparing numerators work? Write a rule and explain why.',
         prompt: <p>When does comparing numerators work? Write a rule and explain why.</p>,
       },
     ],

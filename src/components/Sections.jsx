@@ -45,7 +45,7 @@ export function Hero() {
           </p>
           <h1>Math assessment questions for grades <span className="grade-range">3–5.</span></h1>
           <p className="lede">
-            Nine standards-aligned written-response questions. Each grade includes one question at each
+            Nine standards-aligned math questions. Each grade includes one question at each
             Depth of Knowledge (DOK) level, from 1 to 3, with sample responses and scoring rubrics.
           </p>
           <div className="hero-cta">
@@ -125,7 +125,7 @@ export function QuestionsSection() {
           <p className="eyebrow">Grades 3–5 · DOK 1–3</p>
           <h2 id="questions-heading">Sample assessment questions</h2>
           <p className="section-lede">
-            Three questions per grade: a short response and two constructed responses. Each includes
+            Three questions per grade: one multiple-choice question and two constructed responses. Each includes
             a specific Common Core standard and scoring guidance.
           </p>
         </div>

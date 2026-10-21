@@ -251,7 +251,6 @@ a { color: var(--brand); }
 .item-number { font-family: var(--font-serif); font-size: 2.3rem; line-height: 1; color: var(--dok-c); font-weight: 500; }
 .item-meta { display: flex; flex-wrap: wrap; gap: 2px 7px; font-size: 0.8rem; color: var(--ink-3); }
 .item-meta .dot { opacity: 0.6; }
-.item-head h3 { font-family: var(--font-serif); font-weight: 500; font-size: 1.35rem; margin-top: 3px; }
 
 .item-body { padding: 26px 28px 30px; font-size: 1.06rem; }
 .item-body > p { max-width: 42em; }
@@ -290,7 +289,7 @@ a { color: var(--brand); }
 .choice { border: 1.5px solid var(--line); border-radius: 12px; background: var(--surface); transition: border-color 0.15s, background 0.15s; }
 .choice:hover { border-color: var(--line-strong); }
 .choice:has(input:focus-visible) { outline: 2px solid var(--focus); outline-offset: 2px; }
-.choice-row { display: flex; align-items: center; gap: 14px; padding: 11px 16px; cursor: pointer; }
+.choice-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; padding: 11px 16px; cursor: pointer; }
 .choice-row input { position: absolute; opacity: 0; width: 1px; height: 1px; }
 .choice-letter {
   flex: none; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;

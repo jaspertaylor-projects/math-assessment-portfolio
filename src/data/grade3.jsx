@@ -11,24 +11,30 @@ export const grade3Items = [
     standard: '3.OA.A.4',
     standardText: 'Find the missing whole number in a multiplication or division equation.',
     standardUrl: `${grade3Standards}#page=32`,
-    alignmentEvidence: 'The response supplies the unknown factor in a three-number multiplication equation.',
-    type: 'Short response',
+    alignmentEvidence: 'The response selects the unknown factor in a three-number multiplication equation.',
+    type: 'Multiple choice',
     points: 1,
-    title: 'The missing factor',
     stem: (
       <>
-        <p>What whole number makes this equation true? Write the number.</p>
+        <p>Which number goes in the box? Choose one answer.</p>
         <Eq>6 × <Blank /> = 42</Eq>
       </>
     ),
-    blocks: [{ kind: 'response', label: 'Grade 3, DOK 1: Write the missing factor.' }],
-    key: <p><strong>7.</strong> 6 × 7 = 42.</p>,
-    sample: <p>7</p>,
+    blocks: [{
+      kind: 'choice',
+      options: [
+        { id: 'A', content: '6', note: '6 × 6 = 36, so 6 does not make 42.' },
+        { id: 'B', content: '7', correct: true, note: '6 × 7 = 42.' },
+        { id: 'C', content: '8', note: '6 × 8 = 48, so 8 does not make 42.' },
+        { id: 'D', content: '36', note: '6 + 36 = 42, but this question asks about multiplication.' },
+      ],
+    }],
+    key: <p><strong>B. 7.</strong> 6 × 7 = 42.</p>,
     rubric: [{
       title: 'Scoring rubric · 1 point',
       rows: [
-        { score: '1', text: 'Writes 7. No explanation is required.' },
-        { score: '0', text: 'Gives another number, an unrelated response, or no response.' },
+        { score: '1', text: 'Selects B (7). No explanation is required.' },
+        { score: '0', text: 'Selects another answer or gives no response.' },
       ],
     }],
     dokWhy: 'A familiar multiplication fact determines one missing number.',
@@ -44,7 +50,6 @@ export const grade3Items = [
     alignmentEvidence: 'Students compare 3/8 and 3/4 of equal-length wholes and explain the unequal unit-fraction sizes.',
     type: 'Constructed response',
     points: 3,
-    title: 'Two equal ribbons',
     stem: (
       <>
         <p>
@@ -52,19 +57,23 @@ export const grade3Items = [
           Ada colors <Frac n={3} d={8} /> of her ribbon. Ben colors <Frac n={3} d={4} /> of his ribbon.
         </p>
         <p>
-          Who colors more ribbon? Write a comparison using &lt;, &gt;, or =.
-          Describe a model with two equal-length strips to explain your answer. Tell how many equal parts
-          each strip has, how many parts are colored, and why the colored lengths differ.
+          Who colors more ribbon? Write <Frac n={3} d={8} /> and <Frac n={3} d={4} /> with
+          &lt;, &gt;, or = between them.
+        </p>
+        <p>
+          Describe two strips that are the same length, one for each ribbon. Tell how many equal parts
+          each strip has and how many parts you would color. Explain why one person colors more,
+          even though both color 3 parts.
         </p>
       </>
     ),
-    blocks: [{ kind: 'response', label: 'Grade 3, DOK 2: Compare the fractions and describe an equal-strip model.' }],
+    blocks: [{ kind: 'response', label: 'Grade 3, DOK 2: Tell who colors more. Use a math sign and describe two ribbon strips to explain.' }],
     key: <p><strong>Ben colors more.</strong> <Frac n={3} d={8} /> &lt; <Frac n={3} d={4} />.</p>,
     sample: (
       <p>
-        I would use two strips of the same length. I would divide Ada’s strip into 8 equal parts and color 3.
-        I would divide Ben’s strip into 4 equal parts and color 3. Fourths are bigger than eighths when the
-        whole strips are the same length. Three fourths covers more ribbon than three eighths, so 3/8 &lt; 3/4.
+        Ben colors more. I would use two strips that are the same length. I would split Ada’s strip into
+        8 equal parts and color 3. I would split Ben’s strip into 4 equal parts and color 3. Each fourth is
+        bigger than each eighth. Ben’s 3 parts cover more ribbon, so 3/8 &lt; 3/4.
       </p>
     ),
     rubric: [{
@@ -91,22 +100,25 @@ export const grade3Items = [
     alignmentEvidence: 'Students construct equal-area rectangles, calculate different perimeter lengths, and use them to refute a claim.',
     type: 'Constructed response',
     points: 4,
-    title: 'Does equal area mean equal border?',
     stem: (
       <>
-        <p>Nora says, “Rectangles with the same area always need the same length of border.”</p>
+        <p>Nora says, “If two rectangles have the same area, the distance around them is always the same.”</p>
+        <p>The distance around a shape is called its <strong>perimeter</strong>.</p>
         <p>
-          Is Nora’s claim true? Choose two different rectangles, each with an area of <strong>24 square units</strong>.
-          Use whole-number side lengths from 1 through 8 units. Write the side lengths, area calculation,
-          and perimeter calculation for each rectangle. Use your examples to explain whether Nora’s claim is true.
-          Turning a rectangle does not make a different rectangle.
+          Is Nora right? Choose two different rectangles. Each must have an area of
+          <strong> 24 square units</strong>. Each side length must be a whole number from 1 to 8 units.
+          Turning a rectangle does not make a new rectangle.
+        </p>
+        <p>
+          For each rectangle, write its side lengths. Show how you find its area and perimeter.
+          Use your numbers to explain whether Nora is right.
         </p>
       </>
     ),
-    blocks: [{ kind: 'response', label: 'Grade 3, DOK 3: Describe two rectangles and defend your conclusion about Nora’s claim.' }],
+    blocks: [{ kind: 'response', label: 'Grade 3, DOK 3: Give two rectangles, show your math, and explain whether Nora is right.' }],
     key: (
       <p>
-        <strong>The claim is false.</strong> A 3-by-8 rectangle and a 4-by-6 rectangle both have area 24 square
+        <strong>Nora is wrong.</strong> A 3-by-8 rectangle and a 4-by-6 rectangle both have area 24 square
         units, but their perimeters are 22 units and 20 units.
       </p>
     ),
@@ -114,8 +126,8 @@ export const grade3Items = [
       <p>
         My first rectangle has sides 3 and 8 units: 3 × 8 = 24 square units, and 3 + 8 + 3 + 8 = 22 units
         around. My second has sides 4 and 6 units: 4 × 6 = 24 square units, and 4 + 6 + 4 + 6 = 20 units
-        around. Their areas match, but their borders do not. These two rectangles show that Nora’s word
-        “always” is wrong.
+        around. Both areas are 24 square units, but 22 units around is different from 20 units around.
+        Nora is wrong because rectangles with the same area can have different perimeters.
       </p>
     ),
     rubric: [{

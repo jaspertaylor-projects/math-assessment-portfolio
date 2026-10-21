@@ -9,20 +9,28 @@ export const grade4Items = [
     standard: '4.NBT.A.3',
     standardText: 'Round multi-digit whole numbers to a specified place using place value.',
     standardUrl: 'https://www.thecorestandards.org/Math/Content/4/NBT/A/3/',
-    alignmentEvidence: 'The written number shows whether the student can round a five-digit whole number to the thousands place.',
-    type: 'Short response',
+    alignmentEvidence: 'The student selects the result of rounding a five-digit whole number to the thousands place.',
+    type: 'Multiple choice',
     points: 1,
-    title: 'Round to the nearest thousand',
-    stem: <p>Write 64,782 rounded to the nearest thousand.</p>,
-    blocks: [{ kind: 'response', label: 'Grade 4 DOK 1: 64,782 rounded to the nearest thousand' }],
-    key: <p><strong>65,000.</strong></p>,
-    sample: <p>65,000</p>,
+    stem: <p>Round 64,782 to the nearest thousand. Choose one answer.</p>,
+    blocks: [
+      {
+        kind: 'choice',
+        options: [
+          { id: 'A', content: '64,000', note: '64,782 is closer to 65,000 than to 64,000.' },
+          { id: 'B', content: '64,800', note: 'This is 64,782 rounded to the nearest hundred.' },
+          { id: 'C', content: '65,000', correct: true, note: '64,782 is closer to 65,000 than to 64,000.' },
+          { id: 'D', content: '60,000', note: 'This is 64,782 rounded to the nearest ten thousand.' },
+        ],
+      },
+    ],
+    key: <p><strong>C. 65,000.</strong></p>,
     rubric: [
       {
         title: 'Scoring rubric',
         rows: [
-          { score: '1', text: 'Writes 65,000; an explanation is not required.' },
-          { score: '0', text: 'Gives a different answer or no answer.' },
+          { score: '1', text: 'Selects C (65,000); an explanation is not required.' },
+          { score: '0', text: 'Selects a different answer or no answer.' },
         ],
       },
     ],
@@ -39,10 +47,9 @@ export const grade4Items = [
     alignmentEvidence: 'The student repartitions a fraction-strip model and explains why multiplying both counts by three preserves the shaded amount.',
     type: 'Constructed response',
     points: 3,
-    title: 'Same amount, smaller pieces',
     stem: (
       <>
-        <p>The strip shows <Frac n={3} d={4} /> shaded. The entire strip is one whole.</p>
+        <p>The strip is one whole. <Frac n={3} d={4} /> of it is shaded.</p>
         <figure>
           <svg viewBox="0 0 324 76" role="img" aria-labelledby="grade4-fraction-strip-title" style={{ width: '100%', maxWidth: '24rem', height: 'auto' }}>
             <title id="grade4-fraction-strip-title">One rectangular strip divided into four equal parts. Three parts are shaded.</title>
@@ -54,19 +61,20 @@ export const grade4Items = [
           <figcaption>Three of four equal parts are shaded.</figcaption>
         </figure>
         <p>
-          Imagine splitting <strong>each fourth into three equal smaller parts</strong>, without changing the strip
-          or the shaded amount. What fraction names the shaded amount now? Write an equation showing the equivalent
-          fractions. Explain how the number and size of the parts change, and why the fractions are equal.
+          Imagine splitting <strong>each fourth into 3 equal smaller parts</strong>. Keep the whole strip and
+          the shaded amount the same.
         </p>
+        <p>What fraction of the strip is shaded now? Write an equation to show that the two fractions are equal.</p>
+        <p>Tell how the number of parts and the size of each part change. Explain why both fractions show the same amount.</p>
       </>
     ),
-    blocks: [{ kind: 'response', label: 'Grade 4 DOK 2: equivalent fraction, equation, and explanation of the strip model' }],
+    blocks: [{ kind: 'response', label: 'Write your fraction, equation, and explanation about the strip.' }],
     key: <p><Frac n={3} d={4} /> = <Frac n={9} d={12} />. There are 12 equal parts in all, with 9 shaded.</p>,
     sample: (
       <p>
-        Each fourth becomes 3 twelfths. There are 4 × 3 = 12 equal parts in the whole strip and 3 × 3 = 9 shaded
-        parts. So 3/4 = (3 × 3)/(4 × 3) = 9/12. The pieces are smaller and there are more of them, but the same
-        part of the same strip is shaded.
+        Each fourth is split into 3 smaller equal parts. There are 4 × 3 = 12 equal parts in the whole strip
+        and 3 × 3 = 9 shaded parts. So 3/4 = 9/12. There are more pieces, and each piece is smaller. The same
+        amount of the same strip is still shaded, so the fractions are equal.
       </p>
     ),
     rubric: [
@@ -93,34 +101,40 @@ export const grade4Items = [
     alignmentEvidence: 'The student creates and justifies an unlike-fraction comparison, then explains how a common unit makes numerator comparison valid.',
     type: 'Constructed response',
     points: 4,
-    title: 'Can the numerator settle it?',
     stem: (
       <>
-        <p>Leo makes this claim about fractions of the same whole:</p>
-        <blockquote className="quote">“If two fractions have different numerators and different denominators, the fraction with the greater numerator is always greater.”</blockquote>
+        <p>The top number in a fraction is the numerator. The bottom number is the denominator.</p>
+        <p>Leo says this about fractions of the same whole:</p>
+        <blockquote className="quote">“When two fractions have different top numbers and different bottom numbers, the one with the larger top number is always greater.”</blockquote>
         <p>
-          Decide whether Leo is correct. Create your own pair of fractions to test his claim. Use denominators
-          from 2, 3, 4, 6, 8, or 12. Write a comparison with &lt;, &gt;, or = and justify it with equivalent
-          fractions, a benchmark, or a fraction model described in words.
+          Is Leo right? Make up your own pair of fractions that proves your answer. Use fractions of the same
+          whole, with different top numbers and different bottom numbers. Choose bottom numbers from 2, 3, 4,
+          6, 8, or 12.
         </p>
         <p>
-          Explain what your example proves about the word <strong>always</strong>. Then write a corrected rule
-          for when comparing numerators does work. Explain why your corrected rule works for every pair it describes.
+          Compare your fractions using &lt;, &gt;, or =. Show why your comparison is correct. You can use equal
+          fractions, a familiar fraction such as 1/2, or a fraction drawing that you describe in words.
+        </p>
+        <p>
+          Explain what your example tells you about the word <strong>always</strong>. Then write a rule that
+          tells when looking only at the top numbers works. Explain why your rule works every time it applies.
         </p>
       </>
     ),
-    blocks: [{ kind: 'response', label: 'Grade 4 DOK 3: original fraction counterexample, justification, and corrected rule' }],
+    blocks: [{ kind: 'response', label: 'Write your fractions, comparison, explanation, and new rule.' }],
     key: <p>The claim is false. A valid counterexample must have different numerators and denominators, with the greater numerator belonging to the smaller or equal fraction. A corrected rule must specify equal-sized fractional parts of the same whole.</p>,
     sample: (
       <>
         <p>
-          Leo is incorrect. Compare 4/6 and 3/4 of the same whole: 4/6 = 8/12 and 3/4 = 9/12, so 4/6 &lt; 3/4
-          even though 4 &gt; 3. One counterexample is enough to disprove an “always” claim.
+          Leo is wrong. I used 4/6 and 3/4 of the same whole. Since 4/6 = 8/12 and 3/4 = 9/12, I know
+          4/6 &lt; 3/4 even though 4 &gt; 3. My example shows that Leo's rule does not work every time, so
+          the word “always” is wrong.
         </p>
         <p>
-          A corrected rule is: when fractions of the same whole have the same denominator, the one with the greater
-          numerator is greater. The denominator fixes the size of each part. Counting more of those equal-sized
-          parts gives more of the whole. Fractions with different denominators can first be renamed using a common denominator.
+          My rule is: for fractions of the same whole with the same bottom number, the fraction with the larger
+          top number is greater. The same bottom number means the parts are the same size. More parts of that
+          size always give more of the whole. If the bottom numbers are different, I can first write equal
+          fractions with the same bottom number.
         </p>
       </>
     ),

@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import { Shape } from './Shapes.jsx'
 
-function ChoiceBlock({ block, itemId, revealed }) {
-  const [selected, setSelected] = useState([])
-  const toggle = (id) =>
-    setSelected((cur) =>
-      block.multiple ? (cur.includes(id) ? cur.filter((x) => x !== id) : [...cur, id]) : [id],
-    )
+function ChoiceBlock({ block, itemId, revealed, response, onResponseChange }) {
+  const selected = Array.isArray(response) ? response : []
+  const toggle = (id) => onResponseChange?.(
+    block.multiple ? (selected.includes(id) ? selected.filter((x) => x !== id) : [...selected, id]) : [id],
+  )
 
   return (
     <div className="choices" role={block.multiple ? 'group' : 'radiogroup'} aria-label="Answer choices">
@@ -26,7 +25,7 @@ function ChoiceBlock({ block, itemId, revealed }) {
                 {o.id}
               </span>
               <span className="choice-content">{o.content}</span>
-              {revealed && o.correct && <span className="tag tag-correct">Key</span>}
+              {revealed && o.correct && <span className="tag tag-correct">Correct answer</span>}
               {revealed && isSel && !o.correct && <span className="tag tag-wrong">Your choice</span>}
             </label>
             {revealed && <p className="choice-note">{o.note}</p>}
@@ -167,7 +166,7 @@ function ResponseBlock({ block, response = '', onResponseChange }) {
         aria-label={block.label}
         value={response}
         onChange={(event) => onResponseChange?.(event.target.value)}
-        placeholder={block.variant === 'grid' ? 'Write the perimeter and area of each rectangle…' : 'Type your response…'}
+        placeholder={block.variant === 'grid' ? 'Write the perimeter and area of each rectangle…' : 'Write your answer here…'}
       />
     </div>
   )

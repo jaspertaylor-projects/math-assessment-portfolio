@@ -28,8 +28,9 @@ function Rubric({ table }) {
 
 export function ItemCard({ item, open, onToggle, responses = {}, onResponseChange }) {
   const panelId = `item-${item.id}-key`
+  const headingId = `item-${item.id}-heading`
   return (
-    <article className={`item-card dok-accent-${item.dok}`} id={`item-${item.id}`}>
+    <article className={`item-card dok-accent-${item.dok}`} id={`item-${item.id}`} aria-labelledby={headingId}>
       <header className="item-head">
         <div className="item-number" aria-hidden="true">
           {String(item.id).padStart(2, '0')}
@@ -48,10 +49,7 @@ export function ItemCard({ item, open, onToggle, responses = {}, onResponseChang
               {item.points} {item.points === 1 ? 'point' : 'points'}
             </span>
           </div>
-          <h3>
-            <span className="sr-only">Question {item.id}: </span>
-            {item.title}
-          </h3>
+          <h3 className="sr-only" id={headingId}>Question {item.id}</h3>
         </div>
         <DokBadge level={item.dok} long />
       </header>

@@ -1,6 +1,6 @@
 # Math Assessment Portfolio
 
-A one-page mathematics assessment portfolio featuring nine written-response questions: one question at each Depth of Knowledge level (1–3) for each of grades 3, 4, and 5. Each includes a specific Common Core standard, a link to its source, alignment evidence, sample responses, and scoring guidance.
+A one-page mathematics assessment portfolio featuring nine questions: one question at each Depth of Knowledge level (1–3) for each of grades 3, 4, and 5. DOK 1 questions use multiple choice; DOK 2 and 3 questions use constructed responses. Student prompts use short, direct language. Each question includes a specific Common Core standard, a link to its source, alignment evidence, an answer key, and scoring guidance. Constructed responses also include sample answers.
 
 Built with React + Vite. Hosted for free on Cloudflare.
 

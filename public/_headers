@@ -1,0 +1,13 @@
+# Cache rules for Cloudflare static assets.
+
+# The page itself: browsers must check for a newer version on every visit,
+# so a deploy is visible on the next normal page load.
+/
+  Cache-Control: no-cache
+/index.html
+  Cache-Control: no-cache
+
+# Built JS/CSS: file names change whenever their contents change,
+# so browsers can keep them for a year without ever going stale.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

@@ -65,3 +65,12 @@ In the Worker's **Settings → Domains & Routes**, add a domain you own. Cloudfl
 npx wrangler login
 npm run deploy
 ```
+
+## Caching
+
+`public/_headers` makes every deploy visible on a visitor's next normal page load, with no hard refresh and no manual purge:
+
+- The page (`/`, `/index.html`) is sent with `Cache-Control: no-cache`, so browsers check for a new version on every visit.
+- Built JS/CSS in `/assets/` is cached for a year. That's safe because Vite renames those files whenever their contents change.
+
+The dashboard's **Purge Cache** and **Invalidate Cache** buttons only matter if you add a custom domain and turn on extra caching rules for it.

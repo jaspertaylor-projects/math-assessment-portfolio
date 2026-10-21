@@ -47,12 +47,11 @@ export const grade3Items = [
     standard: '3.NF.A.3b',
     standardText: 'Find simple equivalent fractions and explain why they are equal using a fraction model.',
     standardUrl: 'https://www.thecorestandards.org/Math/Content/3/NF/A/3/b/',
-    alignmentEvidence: 'Students rename the shaded 2/4 as 1/2 and explain how the same shaded area represents both fractions.',
+    alignmentEvidence: 'Students choose two equivalent fractions for the shaded area and explain why both represent the same part of the whole.',
     type: 'Constructed response',
     points: 3,
     stem: (
       <>
-        <p>The square has 4 equal parts. 2 parts are shaded.</p>
         <figure>
           <svg viewBox="0 0 180 180" role="img" aria-labelledby="grade3-equivalent-square" style={{ width: '100%', maxWidth: '12rem', height: 'auto' }}>
             <title id="grade3-equivalent-square">A square split into four equal small squares. The two top squares are shaded. The two bottom squares are not shaded.</title>
@@ -62,12 +61,17 @@ export const grade3Items = [
             <path d="M90 10V170 M10 90H170" fill="none" stroke="var(--ink)" strokeWidth="2" />
           </svg>
         </figure>
-        <p>Write a fraction equal to <Frac n={2} d={4} /> with <strong>2 as the bottom number</strong>.</p>
-        <p>Use the picture to explain why the fractions are equal.</p>
+        <p>Write two different fractions for the shaded part of the square. Explain why both fractions show the same amount.</p>
       </>
     ),
-    blocks: [{ kind: 'response', label: 'Write your equal fraction and explain using the picture.' }],
-    key: <p><strong><Frac n={1} d={2} />.</strong> <Frac n={2} d={4} /> = <Frac n={1} d={2} />.</p>,
+    blocks: [{ kind: 'response', label: 'Write two different fractions for the shaded part and explain why they are equal.' }],
+    key: (
+      <p>
+        Possible answers: <Frac n={2} d={4} /> and <Frac n={1} d={2} />.
+        Accept any two different fractions equal to one half, with a correct explanation.
+        Other examples include <Frac n={3} d={6} /> and <Frac n={4} d={8} />.
+      </p>
+    ),
     sample: (
       <p>
         The 2 shaded parts fill the top half of the square. They make 1 of the 2 equal rows.
@@ -75,12 +79,12 @@ export const grade3Items = [
       </p>
     ),
     rubric: [{
-      title: 'Scoring rubric · 3 points total; add answer and explanation scores',
+      title: 'Scoring rubric · 3 points total; add fractions and explanation scores',
       rows: [
-        { score: 'Answer · 1', text: 'Writes 1/2 as the equal fraction with denominator 2.' },
-        { score: 'Answer · 0', text: 'Gives another fraction or no answer.' },
-        { score: 'Explanation · 2', text: 'Explains that the two shaded fourths together make one of two equal halves of the same square, such as one of its two equal rows.' },
-        { score: 'Explanation · 1', text: 'Gives a correct observation about the shaded parts, but does not connect two fourths to one of two equal halves of the whole.' },
+        { score: 'Fractions · 2', text: 'Writes two different fractions equal to one half, such as 2/4 and 1/2.' },
+        { score: 'Fractions · 1', text: 'Writes only one correct fraction, or repeats the same correct fraction twice.' },
+        { score: 'Fractions · 0', text: 'Gives no correct fraction or no answer.' },
+        { score: 'Explanation · 1', text: 'Uses the picture or describes equal parts to explain why both fractions represent the same shaded amount of the same whole.' },
         { score: 'Explanation · 0', text: 'Gives no correct picture-based explanation, or gives no response.' },
       ],
     }],
